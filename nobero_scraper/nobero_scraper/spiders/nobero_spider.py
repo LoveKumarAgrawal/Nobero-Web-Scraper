@@ -108,7 +108,6 @@ class NoberoSpider(scrapy.Spider):
         if description_content:
             strong_tags = response.css('div#description_content strong::text').getall()
             span_tags = response.css('div#description_content span::text').getall()
-            br_tags = response.css('div#description_content br::text').getall()
             
             # Format the description
             for strong in strong_tags:
